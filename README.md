@@ -73,3 +73,23 @@ CREATE TABLE screenings (
 - Parameters: None
 - e.g: `Get /screenings` should return existing tickes, if no ticket is avaliable, return an empty array
 - Data:
+
+4. **create a booking (ticket) for movie screening**
+
+- should create a ticket
+- Enpoint: `Post /tickets`
+- Data: e.g {
+  "movie_id" = 1, number_of_tickets_purchase = 2
+  }
+
+## Administrators
+
+1. **create new viewing screenings for watching a movie**
+
+- should create a new viewing
+- Endpoint: `Post /screenings`
+- Data: e.g. {
+  movie_id = 1,
+  screening_timestamp= "some time stamp",
+  total_tickets_allocation= 100
+  }

@@ -1,4 +1,4 @@
-import type { ColumnType } from 'kysely';
+import type { ColumnType } from "kysely";
 
 export type Generated<T> = T extends ColumnType<infer S, infer I, infer U>
   ? ColumnType<S, I | undefined, U>
@@ -10,13 +10,13 @@ export interface Directors {
 }
 
 export interface Movies {
-  id: number | null;
+  id: Generated<number>;
   title: string;
   year: number | null;
 }
 
 export interface People {
-  id: number | null;
+  id: Generated<number>;
   name: string;
   birth: number | null;
 }

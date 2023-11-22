@@ -11,6 +11,7 @@ export default function createApp(db: Database) {
 
   // register your controllers here
   app.use('/movies', movies(db))
+  app.use('/screenings', movies(db))
 
   app.use(jsonErrorHandler)
 
